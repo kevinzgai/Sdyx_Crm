@@ -7,7 +7,7 @@ class yueke(models.Model):  # 创建粤科数据类，继承models.Model
     cinemaName = models.CharField(max_length=50, verbose_name='影院名称')
     saleName = models.CharField(max_length=20, verbose_name='销售渠道')
     tranType = models.CharField(max_length=10, verbose_name='交易类型')
-    orderNum = models.CharField(max_length=20, verbose_name='订单号',primary_key=True)
+    orderNum = models.CharField(max_length=20, verbose_name='订单号')
     tranTime = models.DateTimeField(verbose_name='交易时间')
     movieName = models.CharField(max_length=100, verbose_name='影片名称')
     showTime = models.DateTimeField(verbose_name='放映时间')

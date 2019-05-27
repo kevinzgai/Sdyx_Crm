@@ -12,7 +12,7 @@ def uploadDate(request):
     starttime = datetime.datetime.now()
 
     # long running
-    ExcelToDo.readXls('D:\我的坚果云\我的坚果云\工作文档\宝融清算系统\kevin的文档\测试用例\\2期测试用例\中台数据\粤科\线上影票订单表2019-04-01 06_00_00-2019-04-08 05_59_59.xls')
+    ExcelToDo.readXls('/Users/kevin/Desktop/Sdyx_Crm/Data/粤科/线上影票订单表2019-04-01 06_00_00-2019-04-08 05_59_59.xls')
     endtime = datetime.datetime.now()
 
     t = loader.get_template("index.html")
@@ -20,15 +20,22 @@ def uploadDate(request):
     return HttpResponse(t.render(c, request))
 
 
+def GetsaleNameList(request):
+    salelist= yueke.objects.order_by('saleName').distinct('saleName')
+    #for name in salelist.all():
+    print(salelist.all())
+    return HttpResponse(salelist)
+
+
 def readXls(filePath):
     data = xlrd.open_workbook(r'' + filePath + '')
     # 获取所有sheet
-    print(data.sheet_names())  # [u'sheet1', u'sheet2']
+    # print(data.sheet_names())  # [u'sheet1', u'sheet2']
     table1 = data.sheet_by_index(0)  # 得到第一个表格
     listData = list()
     for row in range(5,table1.nrows):
         order = table1.row_values(row)
-        print(order)
+        # print(order)
 
         yuekeOrder = yueke(
             cinemaName=order[0],
@@ -52,5 +59,5 @@ def readXls(filePath):
 
         # yuekeModel=yueke
         # yueke.cinemaName
-        print(table1.row_values(row))  # 遍历所有表格
+        # print(table1.row_values(row))  # 遍历所有表格
     yueke.objects.bulk_create(listData)

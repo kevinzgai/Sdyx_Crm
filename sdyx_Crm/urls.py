@@ -19,5 +19,6 @@ from DataManage import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('data/',views.uploadDate)
+    path('data/',views.uploadDate),
+    path('sale/', views.GetsaleNameList),
 ]
