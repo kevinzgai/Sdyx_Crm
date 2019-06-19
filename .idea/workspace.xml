@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd99b547-5d3e-4cdc-b157-b0f3d54e6b49" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Sdyx_Crm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Sdyx_Crm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Home/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Home/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdyx_Crm/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sdyx_Crm/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="cd99b547-5d3e-4cdc-b157-b0f3d54e6b49" name="Default Changelist" comment="upload" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="255">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#84#93#0" expanded="true" />
               </folding>
@@ -197,7 +189,7 @@
       <workItem from="1560842953091" duration="4340000" />
       <workItem from="1560860955597" duration="348000" />
       <workItem from="1560905202130" duration="7864000" />
-      <workItem from="1560932216872" duration="984000" />
+      <workItem from="1560932216872" duration="1233000" />
     </task>
     <task id="LOCAL-00001">
       <created>1558925422126</created>
@@ -241,11 +233,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560923919766</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="upload">
+      <created>1560933252476</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1560933252476</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24316000" />
+    <option name="totallyTimeSpent" value="24565000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -258,14 +257,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="37" y="23" width="1883" height="1004" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28136882" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3651316" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3651316" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39929742" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -546,8 +544,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#84#93#0" expanded="true" />
           </folding>
