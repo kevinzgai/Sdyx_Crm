@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'DataManage',
+    'Home'
 ]
 
 MIDDLEWARE = [
@@ -81,8 +82,8 @@ DATABASES = {
         'NAME': 'Dj',
         'USER': 'root',
         'PASSWORD': 'bianque007',
-        'HOST': '111.231.98.88',
-        'PORT': '3306',
+        'HOST': '127.0.0.1',
+        'PORT': '32769',
 
     }
 }

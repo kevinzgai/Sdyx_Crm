@@ -3,10 +3,11 @@ import datetime
 import xlrd
 from django.http import HttpResponse
 from django.template import loader
-
+import json
 from DataManage.models import yueke
 from DataManage.Excel.ExcelTodo import ExcelToDo
-
+from django.http import JsonResponse
+from django.core import serializers
 # Create your views here.
 def uploadDate(request):
     starttime = datetime.datetime.now()
@@ -21,10 +22,16 @@ def uploadDate(request):
 
 
 def GetsaleNameList(request):
-    salelist= yueke.objects.order_by('saleName').distinct('saleName')
-    #for name in salelist.all():
-    print(salelist.all())
-    return HttpResponse(salelist)
+    salelist = yueke.objects.all()[:100] #.order_by('saleName').distinct('saleName')
+    # for i in salelist.all().values():
+    #     print(i["id"])
+    # data = {"data":salelist.all()}
+    print(salelist.count())
+    return HttpResponse(DataToJson(salelist))
+
+# 将数据转化为json对象
+def DataToJson(data):
+    return serializers.serialize("json",data)
 
 
 def readXls(filePath):
