@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">统计结果</h3>
+            </div>
+            <div class="panel-body">
+                统计字数{{ len }}
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>字符</th><th>数量</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for w,c in word_dict %}
+                            <tr>
+                            <td>{{ w }} </td><td>{{ c }}</td>
+                            </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+                
+                <div class="alert alert-info">
+                      {{ content }}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

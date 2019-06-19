@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from DataManage import views
-from Home.views import index
+import Home.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('data/',views.uploadDate),
     path('sale/', views.GetsaleNameList),
-    path('',index   )
+    path('',Home.views.index),
+    path('count',Home.views.count )
 ]
