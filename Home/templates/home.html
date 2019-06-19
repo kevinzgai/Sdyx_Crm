@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
-    {% load bootstrap3 %}
+    {% load bootstrap4 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
 </head>
+
 <body>
     <div class="container">
         <div class="title">
-             <h2>
-             Hello
-         </h2>
+            <h2>
+                Hello
+            </h2>
         </div>
         <div class="content">
-             <form action="count" >
-                 <div class="row">
-                     <textarea name="text" class="col-md-12 btn-block" id="" cols="50"  placeholder="在此输入文字" rows="10"></textarea
+            <form action="count">
+                <div class="row">
+                    <textarea name="text" class="col-md-12 btn-block" id="" cols="50" placeholder="在此输入文字" rows="10"></textarea
                      <div class="col-md-12">
                          <input type="submit"  class="btn btn-info btn-block" value="统计">
                          </div>
