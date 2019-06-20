@@ -11,6 +11,16 @@
 </head>
 
 <body>
+       
+
+        {# Display a form #}
+        
+        <form action="/url/to/submit/" method="post" class="form">
+            {% csrf_token %}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">Submit</button>
+            {% endbuttons %}
+        </form>
     <div class="container">
         <div class="title">
             <h2>

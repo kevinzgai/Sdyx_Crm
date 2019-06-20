@@ -11,10 +11,11 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import time
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+SIMPLEUI_LOGIN_PARTICLES = True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -23,14 +24,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bw@85vzhl3u#s05_g(i*@gsp)g!ax$em4+9mnzyk-@@mf=k-y$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [    
     'simpleui',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -70,12 +71,10 @@ TEMPLATES = [
         },
     },
 ]
-STATICFILES_DIRS = [
-     os.path.join(BASE_DIR, "static"),
- ]
+
+
 
 WSGI_APPLICATION = 'sdyx_Crm.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -87,7 +86,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'bianque007',
         'HOST': '127.0.0.1',
-        'PORT': '32769',
+        'PORT': '32861',
 
     }
 }
@@ -115,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
 TIME_ZONE = 'UTC'
 
@@ -130,3 +129,54 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'static'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "/static/"),
+]
+# SIMPLEUI_HOME_PAGE = 'https://www.88cto.com/' #后台登录默认首页
+SIMPLEUI_INDEX = 'https://www.88cto.com'
+
+SIMPLEUI_CONFIG = {
+    'system_keep': False,
+    'menu_display': ['Simpleui', '测试', '权限认证', '动态菜单测试'],      # 开启排序和过滤功能, 不填此字段为默认排序和全部显示, 空列表[] 为全部不显示.
+    'dynamic': True,    # 设置是否开启动态菜单, 默认为False. 如果开启, 则会在每次用户登陆时动态展示菜单内容
+    'menus': [{
+        'name': 'Simpleui',
+        'icon': 'fas fa-code',
+        'url': 'https://gitee.com/tompeppa/simpleui'
+    },{
+        'name': '文字统计工具',
+        'icon': 'fas fa-code',
+        'url': '/'
+    }    , {
+        'app': 'auth',
+        'name': '权限认证',
+        'icon': 'fas fa-user-shield',
+        'models': [{
+            'name': '用户',
+            'icon': 'fa fa-user',
+            'url': 'auth/user/'
+        }]
+    }, {
+        'name': '测试',
+        'icon': 'fa fa-file',
+        'models': [{
+            'name': 'Baidu',
+            'url': 'http://baidu.com',
+            'icon': 'far fa-surprise'
+        }, {
+            'name': '内网穿透',
+            'url': 'https://www.wezoz.com',
+            'icon': 'fab fa-github'
+        }]
+    }, {
+        'name': '动态菜单测试' ,
+        'icon': 'fa fa-desktop',
+        'models': [{
+            'name': time.time(),
+            'url': 'http://baidu.com',
+            'icon': 'far fa-surprise'
+        }]
+    }
+    ]
+}
