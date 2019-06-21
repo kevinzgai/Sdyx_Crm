@@ -143,12 +143,14 @@ SIMPLEUI_CONFIG = {
     'menus': [{
         'name': 'Simpleui',
         'icon': 'fas fa-code',
-        'url': 'https://gitee.com/tompeppa/simpleui'
-    },{
-        'name': '文字统计工具',
-        'icon': 'fas fa-code',
         'url': '/'
-    }    , {
+    },
+{
+        'name': 'Simpleui',
+        'icon': 'fas fa-code',
+        'url': 'https://gitee.com/tompeppa/simpleui'
+    },
+        {
         'app': 'auth',
         'name': '权限认证',
         'icon': 'fas fa-user-shield',
